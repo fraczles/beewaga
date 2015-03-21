@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap.min.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}navbar-static-top.css">
+    <!-- Custom CSS-->
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css"> 
+
+    
+    <meta charset="UTF-8">
+    <title>BeeWaga</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            {% block navbar %}                               
+            
+            {% endblock %}
+        </div>
+    </header> 
+        <div id="content">
+            <div class="wrapper">
+                {% block flash %}   
+                {% endblock %}
+
+
+
+                {% block content %}
+                
+                {% endblock %}
+            </div>
+        </div>
+
+<!-- BIG VIDEO DEPENDENCIES -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+
+<script src="{{STATIC_URL}}js/bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+<script src="{{STATIC_URL}}js/bower_components/imagesloaded/imagesloaded.js"></script>
+
+<script src="{{STATIC_URL}}js/bower_components/video.js/dist/video-js/video.js"></script>
+
+<!-- BIG VIDEO -->
+<script src="{{STATIC_URL}}js/bower_components/BigVideo.js/lib/bigvideo.js"></script>
+
+
+
+                {% block bigvid %}
+
+                {% endblock %}
+
+
+
+
+
+<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+</body>
+</html>

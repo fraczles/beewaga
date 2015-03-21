@@ -1,0 +1,86 @@
+@import url("http://fonts.googleapis.com/css?family=Lato");
+@import url("http://fonts.googleapis.com/css?family=Dosis:300");
+#heada {
+  font-family: "Dosis", sans-serif; }
+
+div .jumbotron {
+  height: 500px; }
+
+h1 {
+  font-family: "Lato", sans-serif; }
+
+#testmandy {
+  font-family: "Dosis", sans-serif;
+  color: green; }
+
+.navbar {
+  height: 55px;
+  background-color: white;
+  padding-bottom: 0px;
+  padding-top: 0px; }
+
+.navbar-brand {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 38px; }
+
+#createAccount {
+  width: 150px;
+  margin-left: 75px;
+  margin-top: 25px;
+  height: 40px; }
+
+#logIn {
+  width: 150px;
+  margin-left: 75px;
+  margin-top: 25px;
+  height: 40px; }
+
+#title1 {
+  text-shadow: 0 0 2px #000;
+  /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 2px #000;
+  -webkit-text-shadow: 0 0 2px #000; }
+
+.navbar-nav li a {
+  padding-top: 18px; }
+
+#navBtn {
+  color: #3498db;
+  font-weight: bold; }
+
+#navLinks {
+  font-family: "Lato", sans-serif;
+  color: #3498db;
+  font-size: 15px; }
+
+.navDisc {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  position: relative;
+  bottom: -4px; }
+
+.myForm {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: 450px;
+  border: 1px solid #D2D2D2;
+  border-radius: 6px; }
+  .myForm .tutorRegisterInput {
+    width: 220px;
+    height: 100px; }
+  .myForm .registerInput {
+    width: 220px;
+    height: 40px;
+    margin-left: 40px;
+    font-size: 18px;
+    margin-top: 15px; }
+  .myForm .authInput {
+    width: 220px;
+    height: 40px;
+    margin-left: 40px;
+    font-size: 18px;
+    margin-top: 15px; }
+
+/*# sourceMappingURL=style.css.map */

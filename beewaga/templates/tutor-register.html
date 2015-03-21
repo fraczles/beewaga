@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+
+{% block flash%}
+
+    {% if auth_form.non_field_errors or user_form.non_field_errors %}
+        <div class="flash error">
+            {{auth_form.non_field_errors}}
+            {{user_form.non_field_errors}}
+        </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block content %}
+<h1 class="text-center">
+    Share the love!
+</h1>
+<div class="myForm">
+    <form action="/tutor-signup-view/" method="post">{% csrf_token %}
+        {% for field in tutor_form %}
+        {{ field }}
+        {% endfor %}
+        <input class="btn btn-success"id="createAccount" type="submit" value="Become a tutor!">
+    </form>
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block navbar%}
+    {% if user.is_authenticated %}
+        {% include 'navbar-logged-in.html'%}
+    {% else %}
+        {%include 'navbar.html'%}
+    {%endif%}
+{% endblock %}
+
+
+{% block content %}
+<h1 class="text-center">Explore tutors</h1>
+<div class="container"></div>
+    <div class="col-md-12">
+        {%for tutor in tutors%}
+        <ul>
+            <a id="testmandy" href="/tutors/{{ tutor.username }}">
+                {{ tutor.username }}
+            </a>
+        </ul>
+        {% endfor %}
+
+    </div>
+</div>
+{%endblock%}

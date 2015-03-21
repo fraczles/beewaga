@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+
+{% block navbar%}
+    {% if user.is_authenticated %}
+        {% include 'navbar-logged-in.html'%}
+    {% else %}
+        {%include 'navbar.html'%}
+    {%endif%}
+{% endblock %}
+{% block content %}
+
+
+<div class="jumbostron">
+    <div class="container text-center">
+        {% if follow %}
+        <h1>
+            Welcome to {{user.username}}'s profile
+        </h1>
+        <h3>
+            {{user.username}} has {{count}} supporters.
+        </h3>
+            <form action="/support/" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="support" value="{{ user.id }}">
+                <input type="submit" value="Support this tutor!">
+            </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

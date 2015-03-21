@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block navbar%}
+    {% include 'navbar-logged-in.html'%}
+{% endblock%}
+
+<!-- Copies 'home.html' stuff here -->
+{% block content %}
+    {% with user.username as username %}
+        {{ block.super }}
+    {% endwith %}
+    
+    {% block bigvid%}
+    {% endblock %}
+
+    <div class="jumbotron">
+    <h1 class="text-center">Welcome {{username}}!</h1>
+
+    <a href="/tutor-signup">Become a tutor!</a>
+    <h3> You are currently supporting {{count}} tutors.</h3>
+    </div>
+{% endblock %}
