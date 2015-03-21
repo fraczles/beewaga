@@ -73,8 +73,8 @@ class TutorProfile(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(RegularUser)
+    #pledge = models.DecimalField(null=True,max_digits=99999, decimal_places=2)
     supports = models.ManyToManyField(TutorProfile, related_name='supported_by', symmetrical=False)
-
 
     
 

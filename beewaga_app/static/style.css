@@ -13,6 +13,9 @@ h1 {
   font-family: "Dosis", sans-serif;
   color: green; }
 
+body {
+  min-height: 500px; }
+
 .navbar {
   height: 55px;
   background-color: white;

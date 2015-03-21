@@ -51,6 +51,7 @@ class Migration(migrations.Migration):
             name='TutorProfile',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('tutor', models.OneToOneField(to='accounts.Tutor')),
             ],
             options={
             },
@@ -60,23 +61,13 @@ class Migration(migrations.Migration):
             name='UserProfile',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('pledge', models.DecimalField(null=True, max_digits=99999, decimal_places=2)),
+                ('supports', models.ManyToManyField(related_name='supported_by', to='accounts.TutorProfile')),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],
             options={
             },
             bases=(models.Model,),
-        ),
-        migrations.AddField(
-            model_name='tutorprofile',
-            name='supporters',
-            field=models.ForeignKey(to='accounts.UserProfile'),
-            preserve_default=True,
-        ),
-        migrations.AddField(
-            model_name='tutorprofile',
-            name='tutor',
-            field=models.OneToOneField(to='accounts.Tutor'),
-            preserve_default=True,
         ),
         migrations.AddField(
             model_name='regularuser',

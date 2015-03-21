@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
-{% block navbar %}
-    {% include 'navbar.html' %}
+{% block navbar%}
+    {% if user.is_authenticated %}
+        {% include 'navbar-logged-in.html'%}
+    {% else %}
+        {%include 'navbar.html'%}
+    {%endif%}
 {% endblock %}
 
 {% block flash%}
