@@ -10,7 +10,12 @@ $bg-color: #d2d2d2;
 $lato: 'Lato', sans-serif;
 $dosis: 'Dosis', sans-serif;
 
-
+ 
+.btn-lg{
+    padding: 5px 16px;
+    font-weight: bold;
+    font-family: $dosis;
+}
 .btn{
 
     background: transparent;
@@ -46,7 +51,7 @@ $dosis: 'Dosis', sans-serif;
 #waga_brand{
     float: left;
     position: absolute;
-    left: 90px;
+    left: 25px;
     top: 5px;
 }
 h1{
@@ -265,7 +270,10 @@ body{
 /* End Mandy's section */
 
 
+.jumbotron{
 
+    margin-top: -20px;
+}
 /* Michelle's section */
 .profile_container {
     .jumbotron {
@@ -306,10 +314,12 @@ body{
 
 #loginFormContainer{
 background-image: url(https://unsplash.imgix.net/1/bag-and-hands.jpg?q=75&fm=jpg&s=473273aff6797b4bbf930092359a9564);
+margin-top: -20px;
 }
 
 #registerFormContainer{
 background-image: url(https://ununsplash.imgix.net/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?q=75&fm=jpg&s=11f3120e69059e1d6ce7f32c6dd6c651);
+margin-top: -20px;
 
 }
 .myForm {

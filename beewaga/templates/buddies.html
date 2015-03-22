@@ -26,13 +26,18 @@
 			</div>
 	    	<div class="profile_container_right">
 	    		<div class="lessons_learning">
-	    			<h2>Lessons Learning</h2>
-	    			<ul>
-	    				<li>First tutor I'm supporting</li>
-	    				<li>Second tutor I'm supporting</li>
-	    				<li>Third tutor I'm supporting</li>
-	    				<li>Fourth tutor I'm supporting</li>
-	    			</ul>
+
+                    {%if count == 0%}
+                    <h2>You follow {{count}} tutors</h2>   
+                    
+                    {%elif count > 0%}
+	    			<h2>You support:</h2>
+                    
+	    			{%for tutor in tutors%}
+                        {{tutor.username}}    
+                    {%endfor%}
+                    {%endif%}
+                    
 	    		</div>
 	    	</div>
 	    </div>

@@ -13,9 +13,10 @@ def home(request, user_form=None, auth_form=None):
     if request.user.is_authenticated():
         user = request.user
         count = len(request.user.profile.supports.all())
+        tutors = request.user.profile.supports.all()
         return render(request,
                       'buddies.html',
-                      {'count': count, 'supporters': None, 'next_url': '/', 'username': user.username})
+                      {'tutors': tutors, 'count': count, 'supporters': None, 'next_url': '/', 'username': user.username})
     # Else show blank page
     else:
         user_form = UserCreateForm()
@@ -125,4 +126,4 @@ def about_beewaga(request):
     return render(request, 'about_beewaga.html')
 
 def about_team(request):
-    return render(request, 'about_team.html')
+    return render(request, 'about_beewaga.html')
