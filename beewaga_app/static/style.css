@@ -1,20 +1,39 @@
+@charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Lato");
 @import url("http://fonts.googleapis.com/css?family=Dosis:300");
-#heada {
-  font-family: "Dosis", sans-serif; }
+.btn {
+  background: transparent;
+  color: #F2F2F2;
+  /* CSS Transition */
+  -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+  -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+  transition: background .2s ease-in-out, border .2s ease-in-out; }
 
-div .jumbotron {
-  height: 500px; }
+#sub_headline {
+  font-family: "Dosis", sans-serif;
+  font-size: 60px;
+  margin-top: 20px; }
+
+#headline {
+  font-family: "Dosis", sans-serif;
+  font-size: 100px; }
+
+#learnMore {
+  width: 150px;
+  margin-left: 75px;
+  margin-top: 25px;
+  height: 40px; }
+
+#waga_brand {
+  float: left;
+  position: absolute;
+  left: 90px;
+  top: 5px; }
 
 h1 {
   font-family: "Lato", sans-serif; }
-
-#testmandy {
-  font-family: "Dosis", sans-serif;
-  color: green; }
-
-body {
-  min-height: 500px; }
 
 .navbar {
   height: 55px;
@@ -31,7 +50,8 @@ body {
   width: 150px;
   margin-left: 75px;
   margin-top: 25px;
-  height: 40px; }
+  height: 40px;
+  opacity: 1.0; }
 
 #logIn {
   width: 150px;
@@ -85,5 +105,199 @@ body {
     margin-left: 40px;
     font-size: 18px;
     margin-top: 15px; }
+
+/* Mandy's section */
+.title_header .text-center {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  color: black; }
+
+.tutor_container .container {
+  padding: 30px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: #d2d2d2;
+  width: 800px; }
+  .tutor_container .container a {
+    color: #6353a1;
+    font-family: "Lato", sans-serif;
+    font-size: 30px; }
+
+.right_side {
+  padding-left: 50px;
+  position: relative;
+  float: right;
+  width: 70%;
+  bottom: 80px; }
+  .right_side h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 38px;
+    color: #6353a1;
+    padding-top: 107px; }
+  .right_side h3 {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    color: #6353a1; }
+
+.left_side {
+  display: block;
+  float: left; }
+  .left_side #tutor_pic img {
+    -webkit-border-radius: 300px;
+            -moz-border-radius: 300px;
+            border-radius: 300px;
+            height: 50px;
+            width: 50px; }
+
+h1 {
+  font-family: "Lato", sans-serif; }
+
+.tutor_box {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #D2D2D2; }
+
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%; }
+
+.wrapper {
+  margin-bottom: 20px; }
+
+.footer {
+  background-color: #d2d2d2;
+  height: 300px;
+  clear: both;
+  padding-top: 20px; }
+  .footer .footer_text {
+    font-family: "Lato", sans-serif;
+    font-size: 15px; }
+  .footer .footer_head {
+    font-family: "Lato", sans-serif;
+    font-style: bold;
+    font-size: 20px; }
+
+/*.footer{
+  background-color: $bg-color;
+  height: 200px;
+  clear:both;
+  padding-top:20px;
+  .footer_text{
+    font-family:$lato;
+    font-size: 15px;
+  }
+  .footer_head{
+    font-family:$lato;
+    font-style: bold;
+    font-size: 20px;
+  }
+}*/
+/* End Mandy's section */
+/* Michelle's section */
+.profile_container .jumbotron .profile_container_left {
+  float: left;
+  width: 48%;
+  text-align: center; }
+.profile_container .jumbotron .profile_container_right {
+  float: right;
+  width: 48%; }
+.profile_container .jumbotron #profile_pic img {
+  -webkit-border-radius: 300px;
+  -moz-border-radius: 300px;
+  border-radius: 300px;
+  height: 350px;
+  width: 350px; }
+.profile_container .jumbotron .become_tutor_button {
+  margin-top: 20px;
+  text-align: center; }
+.profile_container .jumbotron .btn {
+  background: #ed8d30;
+  color: white; }
+
+.formContainer {
+  padding-top: 50px;
+  background: #d2d2d2;
+  min-height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+#loginFormContainer {
+  background-image: url(https://unsplash.imgix.net/1/bag-and-hands.jpg?q=75&fm=jpg&s=473273aff6797b4bbf930092359a9564); }
+
+#registerFormContainer {
+  background-image: url(https://ununsplash.imgix.net/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?q=75&fm=jpg&s=11f3120e69059e1d6ce7f32c6dd6c651); }
+
+.myForm {
+  background: #d2d2d2;
+  opacity: .9;
+  filter: alpha(opacity=70);
+  min-height: 500px;
+  /*background-image: url(https://s-media-cache-ak0.pinimg.com/originals/79/26/0d/79260d265ed92ec1908d7ed6df3cd614.jpg);*/ }
+  .myForm .btn {
+    background: #ed8d30;
+    border-color: #d2d2d2;
+    color: #d2d2d2;
+    opacity: 1.0;
+    filter: alpha(opacity=100); }
+  .myForm #login_header {
+    text-align: center; }
+
+#loginForm form {
+  margin-top: 40px;
+  opacity: 1; }
+
+.home_container {
+  color: white;
+  text-align: center; }
+  .home_container h1 {
+    font-size: 60px; }
+  .home_container h2 {
+    font-size: 40px; }
+  .home_container h4 {
+    font-size: 25px; }
+  .home_container .btn {
+    margin-top: 20px;
+    width: 200px;
+    height: 35px; }
+
+/*Mandy NEWER*/
+.about_container .little_wrap {
+  background-color: #d2d2d2;
+  padding-bottom: 35px; }
+.about_container .title_text {
+  text-align: center;
+  font-size: 100px;
+  font-family: "Lato", sans-serif;
+  font-style: bold; }
+.about_container #team_pic {
+  text-align: center; }
+  .about_container #team_pic img {
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
+    border-radius: 300px; }
+.about_container .team_container {
+  display: block;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  .about_container .team_container img {
+    -webkit-border-radius: 300px;
+    -moz-border-radius: 300px;
+    border-radius: 500px;
+    height: 300px;
+    width: auto;
+    padding-bottom: 15px; }
+  .about_container .team_container .about_text {
+    margin-right: 25px;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    font-style: bold; }
+
+/*Mandy NEWER END*/
+/* End Michelle's section */
 
 /*# sourceMappingURL=style.css.map */

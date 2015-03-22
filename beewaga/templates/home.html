@@ -8,8 +8,7 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <div class="container">
+    <div class="home_container">
         <div class="col-md-12 text-center" id="bigvid" >
             {%block bigvid%}
             <script type="text/javascript">
@@ -18,17 +17,15 @@
             // initialize BigVideo
             BV = new $.BigVideo();
             BV.init();
-            BV.show('{{STATIC_URL}}gfx/bee.mp4',{ambient:true});
+            BV.show('http://mazwai.com/system/posts/videos/000/000/043/original/phil_fried--electric_bulb.mp4?1402703176',{ambient:true});
             });
             </script>
             {%endblock%}
-            <h1>Beewaga</h1>
-            <h2>Help us</h2>
-            <h4>Teach you</h4>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            <h1 id="headline">Beewaga</h1>
+            <h2 id="sub_headline">join the hive</h2>
+            <p><a class="btn btn-info" href="/about_beewaga" role="button">Learn more</a></p>
         </div>
     </div>
-</div>
 
 
  
@@ -36,13 +33,16 @@
 
 {% endblock %}
 
+
+{% block footer %}
+{% endblock %}
 <script type="text/javascript">
      var BV;
      $(function() {
      // initialize BigVideo
      BV = new $.BigVideo();
      BV.init();
-     BV.show('http://video-js.zencoder.com/oceans-clip.mp4',{ambient:true});
+     BV.show('http://mazwai.com/system/posts/videos/000/000/043/original/phil_fried--electric_bulb.mp4?1402703176',{ambient:true});
 });
  </script>
 

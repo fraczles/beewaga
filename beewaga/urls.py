@@ -22,5 +22,6 @@ urlpatterns = patterns('',
                        url(r'^tutors/(?P<username>\w{0,30})/$',
                            'beewaga_app.views.tutors'),
                        url(r'^support/$', 'beewaga_app.views.supports'),
-
+                       url(r'^about_team/$', 'beewaga_app.views.about_team', name='about_team'),
+                       url(r'^about_beewaga/$', 'beewaga_app.views.about_beewaga', name='about_beewaga'),
                        )

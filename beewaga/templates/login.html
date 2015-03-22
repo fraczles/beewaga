@@ -6,17 +6,18 @@
 
 
 {% block content %}
-
-
-    <div class="myForm">
-      <form action="/login-check" method="post">{% csrf_token %}
-        {% for field in auth_form %}
-          {{field}}
-        {% endfor %}
-        {{jerrysfavoritecolor}}
-        <input class="btn btn-success" type="submit" id="logIn" value="Log In">
-      </form>
-    </div>
+<div class="formContainer" id="loginFormContainer">
+	<div class="myForm" id="loginForm">
+		<h1 id="login_header">Log in to your account:</h1>
+	  <form action="/login-check" method="post">{% csrf_token %}
+	    {% for field in auth_form %}
+	      {{field}}
+	    {% endfor %}
+	    {{jerrysfavoritecolor}}
+	    <input class="btn btn-success" type="submit" id="logIn" value="Log In">
+	  </form>
+	</div>
+</div>
     
 
 {% endblock %}

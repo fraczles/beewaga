@@ -12,11 +12,29 @@
     
     {% block bigvid%}
     {% endblock %}
-
-    <div class="jumbotron">
     <h1 class="text-center">Welcome {{username}}!</h1>
 
-    <a href="/tutor-signup">Become a tutor!</a>
-    <h3> You are currently supporting {{count}} tutors.</h3>
+    <div class="profile_container">
+	    <div class="jumbotron">
+	    	<div class="profile_container_left">
+		    	<div id="profile_pic">
+	    		    <img src="https://cloud.githubusercontent.com/assets/10763244/6557509/ee673dce-c64b-11e4-87e3-b219a5db5f7a.jpeg" > <!-- PUT USER PICTURE HERE -->
+	    		</div>
+		    	<div class="become_tutor_button">
+			    	<a class="btn btn-default" href="/tutor-signup">Become a tutor!</a>
+			    </div>
+			</div>
+	    	<div class="profile_container_right">
+	    		<div class="lessons_learning">
+	    			<h2>Lessons Learning</h2>
+	    			<ul>
+	    				<li>First tutor I'm supporting</li>
+	    				<li>Second tutor I'm supporting</li>
+	    				<li>Third tutor I'm supporting</li>
+	    				<li>Fourth tutor I'm supporting</li>
+	    			</ul>
+	    		</div>
+	    	</div>
+	    </div>
     </div>
 {% endblock %}

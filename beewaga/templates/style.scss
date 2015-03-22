@@ -5,50 +5,12 @@
 
 $border-color: #D2D2D2;
 $navBtn-color: #3498db;
-$button-color: #ed8d30;
+$button-color: #6353a1;
 $bg-color: #d2d2d2;
 $lato: 'Lato', sans-serif;
 $dosis: 'Dosis', sans-serif;
 
 
-.btn{
-
-    background: transparent;
-    color: #F2F2F2;
-
-    /* CSS Transition */
-    -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
-    -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
-    -ms-transition: background .2s ease-in-out, border .2s ease-in-out;
-    -o-transition: background .2s ease-in-out, border .2s ease-in-out;
-    transition: background .2s ease-in-out, border .2s ease-in-out;
-
-}
-
-#sub_headline{
-    font-family: $dosis;
-    font-size: 60px;
-    margin-top: 20px;
-}
-#headline{
-    font-family: $dosis;
-    font-size: 100px;
-
-}
-#learnMore{
-    width: 150px;
-    margin-left: 75px;
-    margin-top: 25px;
-    height: 40px;
-    
-}
-
-#waga_brand{
-    float: left;
-    position: absolute;
-    left: 90px;
-    top: 5px;
-}
 h1{
     font-family:$lato;
 }
@@ -68,7 +30,6 @@ h1{
     margin-left: 75px;
     margin-top: 25px;
     height: 40px;
-    opacity: 1.0;
 }
 #logIn{
     width: 150px;
@@ -151,10 +112,9 @@ h1{
 
 .title_header{
     .jumbotron{
-        // background-image: url(https://s-media-cache-ak0.pinimg.com/originals/79/26/0d/79260d265ed92ec1908d7ed6df3cd614.jpg);
-    }
+        background-image: url(https://s-media-cache-ak0.pinimg.com/originals/79/26/0d/79260d265ed92ec1908d7ed6df3cd614.jpg);}
     .text-center{
-    font-size: 50px;
+    font-size: 100px;
     font-weight: bold;
     font-family:$lato;
     color: black;
@@ -297,30 +257,20 @@ body{
 }
 
 .formContainer{
-    padding-top: 50px;
     background: $bg-color;
     min-height: 600px;
+    background-image: url(https://unsplash.imgix.net/1/bag-and-hands.jpg?q=75&fm=jpg&s=473273aff6797b4bbf930092359a9564);
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-#loginFormContainer{
-background-image: url(https://unsplash.imgix.net/1/bag-and-hands.jpg?q=75&fm=jpg&s=473273aff6797b4bbf930092359a9564);
-}
-
-#registerFormContainer{
-background-image: url(https://ununsplash.imgix.net/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?q=75&fm=jpg&s=11f3120e69059e1d6ce7f32c6dd6c651);
-
-}
 .myForm {
     background: $bg-color;
-    opacity: .9;
+    opacity: .7;
     filter:alpha(opacity=70);
     min-height: 500px;
     /*background-image: url(https://s-media-cache-ak0.pinimg.com/originals/79/26/0d/79260d265ed92ec1908d7ed6df3cd614.jpg);*/
     .btn {
         background:  $button-color;
-        border-color: $bg-color;
         color: $bg-color;
         opacity: 1.0;
         filter:alpha(opacity=100);
@@ -351,57 +301,7 @@ background-image: url(https://ununsplash.imgix.net/reserve/EnF7DhHROS8OMEp2pCkx_
    }
    .btn {
     margin-top: 20px;
-    width: 200px;
-    height: 35px;
    }
 }
-
-/*Mandy NEWER*/
-
-.about_container{
-    .little_wrap{
-        background-color:$bg-color;
-        padding-bottom:35px;
-    }
-    .title_text{
-        text-align: center;
-        font-size: 100px;
-        font-family: $lato;
-        font-style: bold;
-    }
-    #team_pic{
-        text-align: center;
-        img{
-        -webkit-border-radius: 300px;
-        -moz-border-radius: 300px;
-        border-radius: 300px;}
-    }
-    .team_container{
-        display: block;
-        text-align: center;
-        padding-top:15px;
-        padding-bottom:15px;
-        img{
-        -webkit-border-radius: 300px;
-        -moz-border-radius: 300px;
-        border-radius: 500px;
-        height: 300px;
-        width:auto;
-        padding-bottom:15px;
-        }
-        .about_text{
-            margin-right:25px;
-            font-family: $lato;
-            font-size: 20px;
-            font-style: bold;
-        }
-
-        }
-    }
-
-
-
-
-/*Mandy NEWER END*/
 
 /* End Michelle's section */

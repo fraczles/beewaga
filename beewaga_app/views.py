@@ -60,15 +60,20 @@ def tutors(request, username=""):
         try:
             tutor = Tutor.objects.get(username=username)
             count = len(tutor.profile.supported_by.all())
+            revenue = 5
         except User.DoesNotExist:
             raise Http404
         # or request.user.profile.supports.filter(user.username==username)
         if username == request.user.username:
             # Return self profile
             return render(request, 'buddies.html', {'user': tutor })
-        return render(request, 'tutor_profile.html', {'user': tutor, 'count': count, 'follow': True, })
+        return render(request, 'tutor_profile.html', {'revenue': revenue,'tutor': tutor, 'count': count, 'follow': True, })
     tutors = Tutor.objects.all()
-    return render(request, 'profiles.html', {'tutors': tutors, 'username': username, })
+    revenue = 5
+    l = []
+    for i in range(len(Tutor.objects.all())):
+        l.append(len(Tutor.objects.all()[0].profile.supported_by.all()))
+    return render(request, 'profiles.html', {'count_list': l,'revenue': revenue,'tutors': tutors, 'username': username, })
 
 def logout_view(request):
     logout(request)
@@ -116,3 +121,8 @@ def supports(request):
                 return redirect('/tutors/')
     return redirect('/tutors/')
 
+def about_beewaga(request):
+    return render(request, 'about_beewaga.html')
+
+def about_team(request):
+    return render(request, 'about_team.html')

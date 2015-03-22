@@ -57,3 +57,25 @@
 <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
 </body>
 </html>
+<!--<footer class="footer">
+    <div class="col-md-2">
+        <h2>About Us</h2>
+        <h3><a href ="/about_beewaga/">What is BeeWaga?</a></h3>
+        <h3><a href="/about_team/">Who are we?</a></h3>
+        <h3>Why BeeWaga?</h3>
+    </div>
+    <div class="col-md-2 col-md-push-2">
+        <h2>Discover</h2>
+        <h3><a href= "/tutors/">Explore Tutors</a></h3>
+        <h3>Explore Courses</h3>
+        <h3>Join a Study Hive</h3>
+    </div>
+     <div class="col-md-2 col-md-push-4">
+        <h2>Join the Hive</h2>
+        <h3><a href="/register/">Become a Tutor</h3>
+        <h3><a href="/register/">Become a Learner</h3>
+    </div>
+</footer>-->
+{% block footer %}
+    {%include "footer.html"%}
+{%endblock%}

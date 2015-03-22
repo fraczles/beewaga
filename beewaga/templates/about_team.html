@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block navbar%}
+    {% if user.is_authenticated %}
+        {% include 'navbar-logged-in.html'%}
+    {% else %}
+        {%include 'navbar.html'%}
+    {%endif%}
+{% endblock %}
+
+
+{% block content %}
+<div class="about_container">
+	<div class="little_wrap">
+		<p class="title_text">Meet the Team!</p>
+		<div id="team_pic">
+			<img src="http://i58.tinypic.com/2v8spab.jpg" >
+		</div>
+	</div>
+	<div class="team_container">
+		<div class="col-md-6">
+			<div id="alex">
+				<img src="http://i57.tinypic.com/1zz18jb.jpg">
+				<p class="about_text">Alex "Honey Pot" Fraczak</p>
+			</div>
+			<div id="jerry">
+				<img src="http://i61.tinypic.com/307qhdd.jpg">
+				<p class="about_text">Jerry "Money Bags" Herrera</p>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div id="mandy">
+				<img src="http://i57.tinypic.com/5dmcg7.jpg">
+				<p class="about_text">Mandy "Eileen Jr." Boltax</p>
+			</div>
+			<div id="michelle">
+				<img src="http://i57.tinypic.com/30upogo.jpg">
+				<p class="about_text">Michelle "Fried Pickles" Hochman</p>
+			</div>
+		</div>
+	</div>
+</div>
+{%endblock%}

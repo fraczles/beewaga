@@ -17,15 +17,16 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="myForm">
-    <form action="/signup" method="post">{% csrf_token %}
-        {% for field in user_form %}
-        {{ field }}
-        {% endfor %}
-        <input class="btn btn-success"id="createAccount" type="submit" value="Create Account">
-    </form>
+<div class="formContainer" id="registerFormContainer">
+    <div class="myForm" id="registerForm">
+        <h1 id="login_header">Join the hive!</h1>
+        <form action="/signup" method="post">{% csrf_token %}
+            {% for field in user_form %}
+            {{ field }}
+            {% endfor %}
+            <input class="btn btn-success"id="createAccount" type="submit" value="Create Account">
+        </form>
+    </div>
 </div>
-
 {% endblock %}
 

@@ -9,17 +9,41 @@
 
 
 {% block content %}
-<h1 class="text-center">Explore tutors</h1>
-<div class="container"></div>
-    <div class="col-md-12">
-        {%for tutor in tutors%}
-        <ul>
-            <a id="testmandy" href="/tutors/{{ tutor.username }}">
-                {{ tutor.username }}
-            </a>
-        </ul>
-        {% endfor %}
-
+<div class="title_header">
+    <div class="jumbotron center">
+        <h1 class="text-center">Explore Tutors</h1>
     </div>
 </div>
+<div class="col-md-6 col-md-push-2">
+    {%for tutor in tutors%}
+    <div class="tutor_container">
+        <div class="container">
+            <div class="col-md-2">
+                <div class="left_side">
+                    <div id="tutor_pic">
+                            <img src="http://i3.kym-cdn.com/entries/icons/original/000/015/725/url-3-10tjli1.jpeg" 
+                          style= "height:250px;width:250px;"  > <!-- PUT USER PICTURE HERE -->
+                        </div>
+                </div>
+            </div>
+            <!-- <div class ="col-md-6 col-md-push-2"> -->
+                <div class = "right_side">
+                    <ul>
+                       <!--  <a class = "tutor_subject">
+                        </a>
+                        <a class=" ">
+                        </a> -->    
+                        <h2>{{tutor.username}} is teaching: _____</h2>            
+                        <a href="/tutors/{{ tutor.username }}">
+                            {{ tutor.username }}
+                        </a>
+                        <h3>Monthly revenue: {{revenue}}$</h3>
+                    </ul>
+              <!--   </div> -->
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+
 {%endblock%}

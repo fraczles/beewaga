@@ -15,10 +15,10 @@
     <div class="container text-center">
         {% if follow %}
         <h1>
-            Welcome to {{user.username}}'s profile
+            Welcome to {{tutor.username}}'s profile
         </h1>
         <h3>
-            {{user.username}} has {{count}} supporters.
+            {{tutor.username}} has {{count}} supporters.
         </h3>
             <form action="/support/" method="post">
                 {% csrf_token %}
