@@ -10,7 +10,9 @@ $bg-color: #d2d2d2;
 $lato: 'Lato', sans-serif;
 $dosis: 'Dosis', sans-serif;
 
- 
+ body{
+    min-height: 0px;
+ }
 .btn-lg{
     padding: 5px 16px;
     font-weight: bold;
@@ -154,81 +156,83 @@ h1{
 /* Mandy's section */
 
 
-.title_header{
-    .jumbotron{
-        // background-image: url(https://s-media-cache-ak0.pinimg.com/originals/79/26/0d/79260d265ed92ec1908d7ed6df3cd614.jpg);
+.taco{
+    #title_header{
+        background-image:url(https://ununsplash.imgix.net/photo-1416339684178-3a239570f315?q=75&fm=jpg&s=c39d9a3bf66d6566b9608a9f1f3765af);
+        background-size: cover;
+        height: 350px;
+        margin-bottom: 20px;
+        text-align:center;
+        .header_placeholder{
+            height:100px;
+        }
+        .explore_tutor_header{
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            background-color: rgba(38,38,38,.7);
+            font-size: 80px;
+            font-weight: bold;
+            font-family: $lato;
+            color:white;
+            width:600px;
+            border-radius:10px;
+        }
     }
-    .text-center{
-    font-size: 50px;
-    font-weight: bold;
-    font-family:$lato;
-    color: black;
-}
-}
-
-.tutor_container{
-    .container{
-        padding: 30px;//@jumbotron-padding (@jumbotron-padding / 2);
-        margin-bottom: 10px;
-        color: white;
+    .tutor_block{
         background-color: $bg-color;
-        width: 800px;
-        a{
-            color: #6353a1;
-            font-family:$lato;
-            font-size: 30px;
+        height:175px;
+        width: 650px;
+        margin-right: auto;
+        margin-left: auto;
+        border-color: black;
+        margin-bottom: 0px;
+        margin-top: 0px;
+
+    #in_box{
+        .wrap_tutor{
+            height:150px;
+            width:175px;
+            padding-top: 20px;
+            padding-left:25px;
+            float:left;
+            #tutor_pic{
+                img{
+                height:135px;
+                width:135px;
+                padding-top:15px;
+                margin-bottom:25px;
+                margin-right:25px;
+                border-radius:300px;}
+            }
+        }
+        .wrap_tutor_text{
+            //background-color:black;
+            width: 450px;
+            height: 175px;
+            float:right;
+            padding-top: 10px;
+            padding-left:45px;
+            .tutor_name{
+                font-size: 25px;
+                font-weight: bold;
+                font-family: $lato;
+                padding-top: 15px;
+
+            }
+            .tutor_subject{
+                font-size: 20px;
+                font-weight: bold;
+                font-family: $lato;
+            }
+            .dollar_billz{
+                font-size: 20px;
+                font-weight: bold;
+                font-family: $lato;
+            }
         }
     }
 }
-
-.right_side{
-    padding-left: 50px;
-    position: relative;
-    float: right;
-    width: 70%;
-    bottom: 80px;
-    h2{
-    font-family: $lato;
-    font-weight: bold;
-    font-size: 38px;
-    color: #6353a1;
-    padding-top:107px;
-    }
-    h3{
-    font-family: $lato;
-    font-weight: bold;
-    font-size: 25px;
-    color: #6353a1;
-    }
-}
-
-.left_side{
-display: block;
-float: left;
-    #tutor_pic img{
-        -webkit-border-radius: 300px;
-        -moz-border-radius: 300px;
-        border-radius: 300px;
-        height: 50px;
-        width: 50px;
-    }
-}
-
-h1{
-    font-family:$lato;
-}
-
-
-.tutor_box
-{
-  height: 100px;
-  width: 100px;
-  border: 1px solid $border-color;
-}
-body{
-    padding:0;
-    margin:0;
-    min-height: 100%;
 }
 
 .wrapper{
@@ -291,8 +295,8 @@ body{
             -webkit-border-radius: 300px;
             -moz-border-radius: 300px;
             border-radius: 300px;
-            height: 350px;
-            width: 350px;
+            height: 150px;
+            width: 150px;
         }
         .become_tutor_button {
             margin-top: 20px;

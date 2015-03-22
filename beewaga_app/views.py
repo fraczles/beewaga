@@ -3,6 +3,7 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
+from django.core.exceptions import ObjectDoesNotExist
 
 from accounts.models import UserProfile, RegularUser, Tutor
 from accounts.forms import UserCreateForm, AuthenticateForm, TutorCreateForm
@@ -116,9 +117,10 @@ def supports(request):
         if support_id:
             try:
                 tutor = Tutor.objects.get(id=support_id)
-                request.user.profile.supports.add(tutor.profile)
+                user = request.user
+                user.profile.supports.add(tutor.profile)
             except ObjectDoesNotExist:
-                return redirect('/tutors/')
+                return redirect('/')
     return redirect('/tutors/')
 
 def about_beewaga(request):

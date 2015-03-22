@@ -72,6 +72,7 @@ class Tutor(RegularUser):
 
 class TutorProfile(models.Model):
     tutor = models.OneToOneField(Tutor)
+    subjects = models.CharField(max_length=100, null=True)
     def gravatar_url_tutor(self):
         return "http://www.gravatar.com/avatar/%s?s=50" % hashlib.md5(self.tutor.email).hexdigest() 
 
@@ -88,5 +89,4 @@ class UserProfile(models.Model):
 
 
 RegularUser.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
-
 Tutor.profile = property(lambda u: TutorProfile.objects.get_or_create(tutor=u)[0])

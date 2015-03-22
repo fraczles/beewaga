@@ -1,6 +1,9 @@
 @charset "UTF-8";
 @import url("http://fonts.googleapis.com/css?family=Lato");
 @import url("http://fonts.googleapis.com/css?family=Dosis:300");
+body {
+  min-height: 0px; }
+
 .btn-lg {
   padding: 5px 16px;
   font-weight: bold;
@@ -112,63 +115,66 @@ h1 {
     margin-top: 15px; }
 
 /* Mandy's section */
-.title_header .text-center {
-  font-size: 50px;
-  font-weight: bold;
-  font-family: "Lato", sans-serif;
-  color: black; }
-
-.tutor_container .container {
-  padding: 30px;
-  margin-bottom: 10px;
-  color: white;
+.taco #title_header {
+  background-image: url(https://ununsplash.imgix.net/photo-1416339684178-3a239570f315?q=75&fm=jpg&s=c39d9a3bf66d6566b9608a9f1f3765af);
+  background-size: cover;
+  height: 350px;
+  margin-bottom: 20px;
+  text-align: center; }
+  .taco #title_header .header_placeholder {
+    height: 100px; }
+  .taco #title_header .explore_tutor_header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: rgba(38, 38, 38, 0.7);
+    font-size: 80px;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    color: white;
+    width: 600px;
+    border-radius: 10px; }
+.taco .tutor_block {
   background-color: #d2d2d2;
-  width: 800px; }
-  .tutor_container .container a {
-    color: #6353a1;
-    font-family: "Lato", sans-serif;
-    font-size: 30px; }
-
-.right_side {
-  padding-left: 50px;
-  position: relative;
-  float: right;
-  width: 70%;
-  bottom: 80px; }
-  .right_side h2 {
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    font-size: 38px;
-    color: #6353a1;
-    padding-top: 107px; }
-  .right_side h3 {
-    font-family: "Lato", sans-serif;
-    font-weight: bold;
-    font-size: 25px;
-    color: #6353a1; }
-
-.left_side {
-  display: block;
-  float: left; }
-  .left_side #tutor_pic img {
-    -webkit-border-radius: 300px;
-            -moz-border-radius: 300px;
-            border-radius: 300px;
-            height: 50px;
-            width: 50px; }
-
-h1 {
-  font-family: "Lato", sans-serif; }
-
-.tutor_box {
-  height: 100px;
-  width: 100px;
-  border: 1px solid #D2D2D2; }
-
-body {
-  padding: 0;
-  margin: 0;
-  min-height: 100%; }
+  height: 175px;
+  width: 650px;
+  margin-right: auto;
+  margin-left: auto;
+  border-color: black;
+  margin-bottom: 0px;
+  margin-top: 0px; }
+  .taco .tutor_block #in_box .wrap_tutor {
+    height: 150px;
+    width: 175px;
+    padding-top: 20px;
+    padding-left: 25px;
+    float: left; }
+    .taco .tutor_block #in_box .wrap_tutor #tutor_pic img {
+      height: 135px;
+      width: 135px;
+      padding-top: 15px;
+      margin-bottom: 25px;
+      margin-right: 25px;
+      border-radius: 300px; }
+  .taco .tutor_block #in_box .wrap_tutor_text {
+    width: 450px;
+    height: 175px;
+    float: right;
+    padding-top: 10px;
+    padding-left: 45px; }
+    .taco .tutor_block #in_box .wrap_tutor_text .tutor_name {
+      font-size: 25px;
+      font-weight: bold;
+      font-family: "Lato", sans-serif;
+      padding-top: 15px; }
+    .taco .tutor_block #in_box .wrap_tutor_text .tutor_subject {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "Lato", sans-serif; }
+    .taco .tutor_block #in_box .wrap_tutor_text .dollar_billz {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: "Lato", sans-serif; }
 
 .wrapper {
   margin-bottom: 20px; }
@@ -218,8 +224,8 @@ body {
   -webkit-border-radius: 300px;
   -moz-border-radius: 300px;
   border-radius: 300px;
-  height: 350px;
-  width: 350px; }
+  height: 150px;
+  width: 150px; }
 .profile_container .jumbotron .become_tutor_button {
   margin-top: 20px;
   text-align: center; }
