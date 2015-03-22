@@ -21,25 +21,21 @@
             <div class="col-md-2">
                 <div class="left_side">
                     <div id="tutor_pic">
-                            <img src="http://i3.kym-cdn.com/entries/icons/original/000/015/725/url-3-10tjli1.jpeg" 
-                          style= "height:250px;width:250px;"  > <!-- PUT USER PICTURE HERE -->
+
+                            <img src="{{tutor.profile.gravatar_url_tutor}}"
+                          style= "height:250px;width:250px;"  > 
                         </div>
                 </div>
             </div>
-            <!-- <div class ="col-md-6 col-md-push-2"> -->
+            
                 <div class = "right_side">
                     <ul>
-                       <!--  <a class = "tutor_subject">
-                        </a>
-                        <a class=" ">
-                        </a> -->    
-                        <h2>{{tutor.username}} is teaching: _____</h2>            
+                       <h2>{{tutor.username}} is teaching: _____</h2>            
                         <a href="/tutors/{{ tutor.username }}">
                             {{ tutor.username }}
                         </a>
                         <h3>Monthly revenue: {{revenue}}$</h3>
                     </ul>
-              <!--   </div> -->
             </div>
         </div>
     </div>

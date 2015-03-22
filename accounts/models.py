@@ -47,7 +47,7 @@ class RegularUser(AbstractBaseUser, PermissionsMixin):
     objects = RegularUserManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
-    
+
     stripe_id = models.CharField(max_length=50, null=True)
     # New stuff
     user_image = models.ImageField(
@@ -72,11 +72,16 @@ class Tutor(RegularUser):
 
 class TutorProfile(models.Model):
     tutor = models.OneToOneField(Tutor)
+    def gravatar_url_tutor(self):
+        return "http://www.gravatar.com/avatar/%s?s=50" % hashlib.md5(self.tutor.email).hexdigest() 
 
 class UserProfile(models.Model):
     user = models.OneToOneField(RegularUser)
     #pledge = models.DecimalField(null=True,max_digits=99999, decimal_places=2)
     supports = models.ManyToManyField(TutorProfile, related_name='supported_by', symmetrical=False)
+
+    def gravatar_url(self):
+        return "http://www.gravatar.com/avatar/%s?s=50" % hashlib.md5(self.user.email).hexdigest() 
 
     
 

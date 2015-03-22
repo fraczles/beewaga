@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block navbar%}
+    {% if user.is_authenticated %}
+        {% include 'navbar-logged-in.html'%}
+    {% else %}
+        {%include 'navbar.html'%}
+    {%endif%}
+{% endblock %}
+
+
+{% block content %}
+<div class="why_bee">
+	<div id="bee_wag_container">
+		<p class="wag_head">
+		Why Beewaga?
+		</p>
+	</div>
+	<div class="wag_text">
+		<p class= "wag">The <span class="dance">Waggle Dance</span> refers to a special figure-8 dance performed by successful bees, in order to share information with the rest of the colony about the direction and distance to patches of flowers that hold nectar and pollen.  This dance models the one-to-many model of teaching we think our students could really benefit from. 
+		</p>
+	
+</div>
+
+{%endblock%}

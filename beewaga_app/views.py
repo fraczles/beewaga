@@ -73,7 +73,7 @@ def tutors(request, username=""):
     tutors = Tutor.objects.all()
     revenue = 5
     l = []
-    return render(request, 'profiles.html', {'count_list': l,'revenue': revenue,'tutors': tutors, 'username': username, })
+    return render(request, 'profiles.html', {'revenue': revenue,'tutors': tutors, 'username': username, })
 
 def logout_view(request):
     logout(request)
@@ -127,6 +127,8 @@ def about_beewaga(request):
 def about_team(request):
     return render(request, 'about_team.html')
 
+def about_name(request):
+    return render(request, 'about_name.html')
 
 def test(request):
     return render(request, 'sp3.html')
@@ -150,10 +152,4 @@ def pay(request):
             customer=user.stripe_id,
             description="nice"
         )
-
-
-
-
-
-
     return render(request, 'test.html', {'obj': request.user.stripe_id})
