@@ -88,7 +88,8 @@ def tutor_signup(request):
     tutor_form = TutorCreateForm(data=request.POST)
     if request.method == 'POST':
         if tutor_form.is_valid():
-            tutor_form.save()
+            tutor = Tutor(username=request.user.username+"tutor", email=request.user.email+"tutor")
+            tutor.save()
             return redirect('/')
         else:
             return redirect('/tutor-signup')

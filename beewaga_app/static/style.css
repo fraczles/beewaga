@@ -99,8 +99,12 @@ h1 {
   border: 1px solid #D2D2D2;
   border-radius: 6px; }
   .myForm .tutorRegisterInput {
+    margin-left: 38px;
+    margin-top: 30px;
     width: 220px;
     height: 100px; }
+  .myForm #id_subjects {
+    margin-left: 72px; }
   .myForm .registerInput {
     width: 220px;
     height: 40px;
@@ -458,5 +462,101 @@ h1 {
           transition: background .2s ease-in-out, border .2s ease-in-out; }
 
 /*END OF THIS ONE FINALLY*/
+/*Code for Tutor Profile*/
+.tutor_page_container .t_p_header {
+  font-family: "Lato", sans-serif;
+  font-size: 70px;
+  font-weight: 800px;
+  text-align: center; }
+.tutor_page_container #outer_facts {
+  background-color: #262626;
+  height: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 25px; }
+  .tutor_page_container #outer_facts #tutor_facts {
+    height: 400px;
+    background-color: #d2d2d2;
+    padding-left: 325px;
+    padding-top: 30px; }
+    .tutor_page_container #outer_facts #tutor_facts #fact_image {
+      float: left;
+      width: 400px;
+      border-color: #ed8d30; }
+      .tutor_page_container #outer_facts #tutor_facts #fact_image img {
+        border-radius: 300px;
+        height: 350px;
+        width: 350px; }
+    .tutor_page_container #outer_facts #tutor_facts #fact_text {
+      float: right;
+      padding-right: 370px;
+      padding-top: 30px;
+      margin-bottom: 50px; }
+      .tutor_page_container #outer_facts #tutor_facts #fact_text .info_text {
+        font-family: "Lato", sans-serif;
+        font-size: 40px;
+        font-style: 900px;
+        padding-bottom: 0px; }
+        .tutor_page_container #outer_facts #tutor_facts #fact_text .info_text .under {
+          padding-top: 0px;
+          font-size: 15px;
+          font-weight: 600px; }
+.tutor_page_container #about_the_tutor {
+  background-color: #d2d2d2;
+  height: 1200px; }
+  .tutor_page_container #about_the_tutor .all_about_tutor {
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    font-style: 900px;
+    padding-left: 290px;
+    float: left; }
+  .tutor_page_container #about_the_tutor #about_tutor_img {
+    padding-top: 100px;
+    padding-bottom: 15px;
+    padding-left: 50px; }
+    .tutor_page_container #about_the_tutor #about_tutor_img img {
+      height: 500px;
+      width: 700px;
+      padding-bottom: 50px;
+      padding-left: 50px; }
+  .tutor_page_container #about_the_tutor .all_about_tutor2 {
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    font-style: 900px;
+    padding-left: 290px;
+    float: left;
+    padding-bottom: 0px; }
+  .tutor_page_container #about_the_tutor #wrap_blurb {
+    padding-left: 10px;
+    margin-left: 140px;
+    width: 600px;
+    height: 300px;
+    padding-top: 83px; }
+    .tutor_page_container #about_the_tutor #wrap_blurb .course_blurb {
+      font-family: "Lato", sans-serif;
+      font-size: 20px;
+      float: left; }
+  .tutor_page_container #about_the_tutor #comments_section {
+    background-color: #d2d2d2;
+    float: left;
+    width: auto;
+    height: 200px; }
+    .tutor_page_container #about_the_tutor #comments_section .all_about_tutor3 {
+      font-family: "Lato", sans-serif;
+      font-size: 40px;
+      font-style: 900px;
+      padding-left: 250px;
+      float: left;
+      padding-bottom: 0px; }
+  .tutor_page_container #about_the_tutor #rewards {
+    float: right;
+    width: 200px;
+    padding-right: 25px; }
+    .tutor_page_container #about_the_tutor #rewards .all_about_tutor3 {
+      font-family: "Lato", sans-serif;
+      font-size: 40px;
+      font-style: 900px; }
+
+/*End code for tutor Profile*/
 
 /*# sourceMappingURL=style.css.map */

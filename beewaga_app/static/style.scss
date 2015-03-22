@@ -128,12 +128,17 @@ h1{
     border-radius: 6px;
 
     .tutorRegisterInput{
+     margin-left: 38px;
+     margin-top: 30px;
      width: 220px;
      height: 100px;   
 
     }
 
+    #id_subjects{
+        margin-left: 72px;
 
+    }
     .registerInput{
         width: 220px;
         height: 40px;
@@ -181,6 +186,7 @@ h1{
     }
     .tutor_block{
         background-color: $bg-color;
+       // border-radius:70px;
         height:175px;
         width: 650px;
         margin-right: auto;
@@ -615,12 +621,143 @@ margin-top: -20px;
 }
 
 
-
-
-
-
-
-
-
-
 /*END OF THIS ONE FINALLY*/
+
+
+
+/*Code for Tutor Profile*/
+
+.tutor_page_container{
+    .t_p_header{
+      font-family: $lato;
+      font-size: 70px;
+      font-weight: 800px;
+      text-align: center;
+    }
+
+    #outer_facts{
+        background-color: rgb(38,38,38);
+        height:500px;
+        padding-top:50px;
+        padding-bottom:50px;
+        margin-top: 25px;
+        #tutor_facts{
+            height:400px;
+            background-color: $bg-color;
+            padding-left: 325px;
+            padding-top: 30px;
+            #fact_image{
+                float:left;
+                width: 400px;
+                border-color:#ed8d30;
+                img{
+                    border-radius:300px;
+                    height:350px;
+                    width: 350px;
+                }
+            }
+            #fact_text{
+                //background-color:white;
+                float: right;
+                padding-right:370px;
+                padding-top:30px;
+                margin-bottom:50px;
+
+                .info_text{
+
+                    font-family: $lato;
+                    font-size: 40px;
+                    font-style: 900px;
+                    padding-bottom:0px;
+                    .under{
+                        padding-top:0px;
+                        font-size:15px;
+                        font-weight: 600px;
+                    }
+                }
+            }
+            
+        }
+    }
+    #about_the_tutor{
+        background-color: $bg-color;
+        height: 1200px;
+        .all_about_tutor{
+            font-family: $lato;
+            font-size: 40px;
+            font-style: 900px;
+            padding-left:290px;
+            float: left;
+        }
+        #about_tutor_img{
+            padding-top: 100px;
+            padding-bottom: 15px;
+            padding-left:50px;
+          
+            img{
+                height: 500px;
+                width: 700px;
+                padding-bottom: 50px;
+                padding-left:50px;
+            }
+        }
+        .all_about_tutor2{
+            font-family: $lato;
+            font-size: 40px;
+            font-style: 900px;
+            padding-left:290px;
+            float: left;
+            padding-bottom:0px;
+        }
+        #wrap_blurb{
+            //float:left;
+            padding-left: 10px;
+            margin-left:140px;
+           // padding-right:500px;
+           // background-color:white;
+            width:600px;
+            height:300px;
+            padding-top:83px;
+
+            .course_blurb{
+                font-family: $lato;
+                font-size: 20px;
+                float:left;   
+            }
+        }
+        #comments_section
+        {
+            background-color:$bg-color;
+            float:left;
+            width:auto;
+            height:200px;
+            //border-bottom: 2px solid;
+            //border-color:rgb(38,38,38);
+            .all_about_tutor3{
+            font-family: $lato;
+            font-size: 40px;
+            font-style: 900px;
+            padding-left:250px;
+            float: left;
+            padding-bottom:0px;
+            }
+        }
+
+        #rewards{
+            float:right;
+            width:200px;
+            //padding-left:00px;
+            padding-right:25px;
+            .all_about_tutor3{
+            font-family: $lato;
+            font-size: 40px;
+            font-style: 900px;
+            
+        }
+        }
+    }
+}
+
+
+
+/*End code for tutor Profile*/

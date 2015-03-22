@@ -10,31 +10,66 @@
 {% endblock %}
 {% block content %}
 
-
-<div class="jumbostron">
-    <div class="container text-center">
+    <div class="tutor_page_container">
         {% if follow %}
-        <h1>
-            Welcome to {{tutor.username}}'s profile
-        </h1>
-        <h3>
-            {{tutor.username}} has {{count}} supporters.
-        </h3>
+        <div class="t_p_header">
+            <h1>
+                 {{tutor.username}}: Tutor Page
+            </h1>
+          
+        </div>
+        <div id="outer_facts">
+            <div id="tutor_facts">
+                <div id="fact_image">
+                    <img src="http://i57.tinypic.com/1zz18jb.jpg">
+                </div>
+                 <div id="rewards">
+                
+            </div>
 
+                <div id="fact_text">
+                    <h3 class="info_text">
+                        {{count}} <br><span class="under">supporters</span>
+                    </h3>
+                    <h3 class="info_text">
+                        $$$$$<br> <span class="under">pledged so far</span>
+                    </h3>
+                    <form action="/pay/" method="POST">{%csrf_token%}
+                  
+                    <input type="hidden" name="support" value="{{ tutor.id }}">
+                    <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_test_QfM3onQdXMVQqdfZ3V7MwOas"
+                        data-amount="2000"
+                        data-name="Beewagga"
+                        data-description="Pledge"
+                        data-image="{{STATIC_URL}}gfx/logo.png">
+                    </script>
+
+                    </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div id="about_the_tutor">
+            <h2 class="all_about_tutor">Meet {{tutor.username}}</h2>
+            <h2 class="all_about_tutor">Knowledge Perks</h2>
+            <div id="about_tutor_img">
+                <img src="https://ununsplash.imgix.net/27/type-set.jpg?q=75&fm=jpg&s=7ea5df158309ce05a1e059f974e287be">
+                
+            </div>
+
+            <h2 class="all_about_tutor2">About the Course</h2>
+            <div id="wrap_blurb">
+                <p class="course_blurb">This is a course on basic mechanics.  Having worked at a car shop for 15 years and having grown up with a passion for cars, I would love to share what I know with you.  If there's anything specific you want me to demo just let me know via private-message, and I'll see what I can do.  Thanks for checking out my page!</p>
+            </div>
+            <div id="comments_section">
+                <div class="all_about_tutor3">Join the Conversation</div>
+            </div>
             
-            <form action="/pay/" method="POST">{%csrf_token%}
-            <input type="hidden" name="support" value="{{ tutor.id }}">
-            <script
-            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="pk_test_QfM3onQdXMVQqdfZ3V7MwOas"
-            data-amount="2000"
-            data-name="Beewagga"
-            data-description="Pledge"
-            data-image="{{STATIC_URL}}gfx/logo.png">
-            </script>
-
-            </form>
-        {% endif %}
+        </div>   
+            
+       
     </div>
 </div>
 {% endblock %}

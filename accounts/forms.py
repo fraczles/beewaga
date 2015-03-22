@@ -58,9 +58,10 @@ class UserCreateForm(UserCreationForm):
 
 
 class TutorCreateForm(forms.Form):
-    subjects = forms.CharField(max_length=100)
     bio = forms.CharField(widget=forms.widgets.TextInput(
         attrs={'placeholder': 'Subjects', 'class': 'tutorRegisterInput'}))
+
+
 
     class Meta:
         fields = ['subjects', 'bio']
