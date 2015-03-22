@@ -76,17 +76,26 @@ class TutorProfile(models.Model):
     def gravatar_url_tutor(self):
         return "http://www.gravatar.com/avatar/%s?s=50" % hashlib.md5(self.tutor.email).hexdigest() 
 
+class Pledge(models.Model):
+    #amount = models.DecimalField(max_digits=999, decimal_places=2)
+    stripe_id = models.CharField(max_length=50, null=True)
+    tutor = models.OneToOneField(TutorProfile, null=True)
+
+
 class UserProfile(models.Model):
     user = models.OneToOneField(RegularUser)
     #pledge = models.DecimalField(null=True,max_digits=99999, decimal_places=2)
     supports = models.ManyToManyField(TutorProfile, related_name='supported_by', symmetrical=False)
-
+    pledges = models.ManyToManyField(Pledge, related_name='pledge_from',symmetrical=False)
     def gravatar_url(self):
         return "http://www.gravatar.com/avatar/%s?s=50" % hashlib.md5(self.user.email).hexdigest() 
 
-    
+
 
 
 
 RegularUser.profile = property(lambda u: UserProfile.objects.get_or_create(user=u)[0])
 Tutor.profile = property(lambda u: TutorProfile.objects.get_or_create(tutor=u)[0])
+
+
+UserProfile.pledges = property(lambda u: Pledge.objects.get_or_create()[0]) 

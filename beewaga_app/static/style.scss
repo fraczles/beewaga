@@ -538,4 +538,89 @@ margin-top: -20px;
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+.user_prof{
+   /* .prof_title{
+        font-family: $lato;
+        font-size: 40;
+        font-weight: 800;
+        text-align: center;
+    }*/
+    #profile_container{
+        background-color: rgb(38,38,38);
+        height:400px;
+        padding-top:50px;
+        padding-bottom:50px;
+        margin-top: 25px;
+        #inner_tainer{
+            background-color:$bg-color;
+            height:300px;
+            .prof_text{
+                float:right;
+                padding-top:35px;
+                margin-right: 500px;
+                .my_name{
+                    font-family: $lato;
+                    font-size: 40px;
+                    font-weight: 800px;
+                   // text-align: center;
+
+                    //padding-bottom:10px;
+                }
+                .supporting{
+                    font-family: $lato;
+                    font-size: 30px;
+                    font-weight: 600px;
+                    //text-align: center;
+                    padding-top:5px;
+                    padding-bottom: 10px;
+                }
+            }
+            #user_pic{
+                padding-top:45px;
+                margin-left: 120px;
+
+                img{
+                    float:left;
+                    height: 200px;
+                    border-radius: 300px;
+                }
+            }
+            .button_wrap{
+                padding-top:10px;
+                .btn{
+                    background:#ed8d30;
+                    color: #F2F2F2;
+
+                    /* CSS Transition */
+                    -webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+                    -moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+                    -ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+                    -o-transition: background .2s ease-in-out, border .2s ease-in-out;
+                    transition: background .2s ease-in-out, border .2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 /*END OF THIS ONE FINALLY*/

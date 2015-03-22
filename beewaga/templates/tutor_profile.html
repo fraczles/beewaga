@@ -20,11 +20,10 @@
         <h3>
             {{tutor.username}} has {{count}} supporters.
         </h3>
-            <form action="/support/" method="post">{% csrf_token %}
-                <input type="hidden" name="support" value="{{ tutor.id }}">
-                <input type="submit" value="Support {{tutor.username}}!">
-            </form>
+
+            
             <form action="/pay/" method="POST">{%csrf_token%}
+            <input type="hidden" name="support" value="{{ tutor.id }}">
             <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="pk_test_QfM3onQdXMVQqdfZ3V7MwOas"

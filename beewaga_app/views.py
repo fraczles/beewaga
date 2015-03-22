@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.core.exceptions import ObjectDoesNotExist
 
-from accounts.models import UserProfile, RegularUser, Tutor
+from accounts.models import UserProfile, RegularUser, Tutor, Pledge
 from accounts.forms import UserCreateForm, AuthenticateForm, TutorCreateForm
 
 import stripe
@@ -121,7 +121,7 @@ def supports(request):
                 user.profile.supports.add(tutor.profile)
             except ObjectDoesNotExist:
                 return redirect('/')
-    return redirect('/tutors/')
+    return redirect('/pay/')
 
 def about_beewaga(request):
     return render(request, 'about_beewaga.html')
@@ -139,19 +139,36 @@ def test(request):
 @login_required
 def pay(request):
     if request.method == 'POST':
-        user = request.user
+        support_id = request.POST.get('support', False)
+        if support_id:
+            try:
+                tutor = Tutor.objects.get(id=support_id)
+            except ObjectDoesNotExist:
+                redirect('/')
         stripe.api_key = 'sk_test_kPXdUZ1fURSK3ziMEkw1O9rs'
+
+        #Charge via stripe
         customer = stripe.Customer.create(
             description=request.user.username,
             card=request.POST.get('stripeToken')
         )
+        user = request.user
         user.stripe_id = customer.id
         user.save()
-
         stripe.Charge.create(
             amount=500,
             currency="usd",
             customer=user.stripe_id,
             description="nice"
         )
-    return render(request, 'thank_you.html', {'obj': request.user.stripe_id})
+
+        #Add supporter
+        
+        
+        user.profile.supports.add(tutor.profile)
+            
+
+    return render(request, 'thank_you.html')
+
+def thank_you(request):
+    return render(request, 'thank_you.html')

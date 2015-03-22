@@ -12,34 +12,27 @@
     
     {% block bigvid%}
     {% endblock %}
-    <h1 class="text-center">Welcome {{username}}!</h1>
+    <div class="user_prof">
+	    <!-- <h1 class="prof_title">Welcome {{username}}!
+	    </h1> -->
+		<div id="profile_container">
+			<div id="inner_tainer">
+				<div class="prof_text">
+					<p class= "my_name">{{username}}: 
+					</p>
+					<p class="supporting">Currently supporting: <br>Some Real Dece Tutors
+					</p>
+					<div class="button_wrap">
+						<a class="btn btn-default" href="/tutor-signup">Become a tutor!</a>
+					</div>
+				</div>
+				<div id="user_pic">
+					<img src="http://i57.tinypic.com/5dmcg7.jpg">
+				</div>
 
-    <div class="profile_container">
-	    <div class="jumbotron">
-	    	<div class="profile_container_left">
-		    	<div id="profile_pic">
-	    		    <img src="" > <!-- PUT USER PICTURE HERE -->
-	    		</div>
-		    	<div class="become_tutor_button">
-			    	<a class="btn btn-default" href="/tutor-signup">Become a tutor!</a>
-			    </div>
 			</div>
-	    	<div class="profile_container_right">
-	    		<div class="lessons_learning">
+		</div>
 
-                    {%if count == 0%}
-                    <h2>You follow {{count}} tutors</h2>   
-                    
-                    {%elif count > 0%}
-	    			<h2>You support:</h2>
-                    
-	    			{%for tutor in tutors%}
-                        {{tutor.username}}    
-                    {%endfor%}
-                    {%endif%}
-                    
-	    		</div>
-	    	</div>
-	    </div>
+	    
     </div>
 {% endblock %}
