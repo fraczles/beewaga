@@ -22,19 +22,19 @@
         </h3>
             <form action="/support/" method="post">{% csrf_token %}
                 <input type="hidden" name="support" value="{{ tutor.id }}">
-                <input type="submit" value="Support this tutor!">
+                <input type="submit" value="Support {{tutor.username}}!">
             </form>
-            <!--<form action="" method="POST">
+            <form action="/pay/" method="POST">{%csrf_token%}
             <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="pk_test_QfM3onQdXMVQqdfZ3V7MwOas"
             data-amount="2000"
-            data-name="BeeWagga"
+            data-name="Beewagga"
             data-description="Pledge"
-            data-image="/128x128.png">
+            data-image="{{STATIC_URL}}gfx/logo.png">
             </script>
 
-            </form>-->
+            </form>
         {% endif %}
     </div>
 </div>

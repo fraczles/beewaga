@@ -154,4 +154,4 @@ def pay(request):
             customer=user.stripe_id,
             description="nice"
         )
-    return render(request, 'test.html', {'obj': request.user.stripe_id})
+    return render(request, 'thank_you.html', {'obj': request.user.stripe_id})

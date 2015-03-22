@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block navbar%}
+    {% if user.is_authenticated %}
+        {% include 'navbar-logged-in.html'%}
+    {% else %}
+        {%include 'navbar.html'%}
+    {%endif%}
+{% endblock %}
+
+
+{% block content %}
+    <div class="jumbotron">
+        <h1> Thank you! </h1>  
+        <h3> Thanks for supporting the educators who work hard to teach you</h3>
+        <h3>Click <a href="/">here</a> to go back home
+        </h3>
+    </div>
+
+
+{%endblock%}
