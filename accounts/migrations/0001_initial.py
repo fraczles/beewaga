@@ -61,7 +61,6 @@ class Migration(migrations.Migration):
             name='UserProfile',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('pledge', models.DecimalField(null=True, max_digits=99999, decimal_places=2)),
                 ('supports', models.ManyToManyField(related_name='supported_by', to='accounts.TutorProfile')),
                 ('user', models.OneToOneField(to=settings.AUTH_USER_MODEL)),
             ],

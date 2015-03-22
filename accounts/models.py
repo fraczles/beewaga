@@ -43,10 +43,12 @@ class RegularUser(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True, null=False)
     is_staff = models.BooleanField(default=False, null=False)
 
+
     objects = RegularUserManager()
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
-
+    
+    stripe_id = models.CharField(max_length=50, null=True)
     # New stuff
     user_image = models.ImageField(
         upload_to="uploads", blank=False, null=False, default="/static/gfx/logo.png")

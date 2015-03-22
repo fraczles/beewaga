@@ -7,6 +7,7 @@ from django.http import Http404
 from accounts.models import UserProfile, RegularUser, Tutor
 from accounts.forms import UserCreateForm, AuthenticateForm, TutorCreateForm
 
+import stripe
 
 def home(request, user_form=None, auth_form=None):
     # If user is logged in, show different stuff.
@@ -72,8 +73,6 @@ def tutors(request, username=""):
     tutors = Tutor.objects.all()
     revenue = 5
     l = []
-    for i in range(len(Tutor.objects.all())):
-        l.append(len(Tutor.objects.all()[0].profile.supported_by.all()))
     return render(request, 'profiles.html', {'count_list': l,'revenue': revenue,'tutors': tutors, 'username': username, })
 
 def logout_view(request):
@@ -126,4 +125,35 @@ def about_beewaga(request):
     return render(request, 'about_beewaga.html')
 
 def about_team(request):
-    return render(request, 'about_beewaga.html')
+    return render(request, 'about_team.html')
+
+
+def test(request):
+    return render(request, 'sp3.html')
+
+
+@login_required
+def pay(request):
+    if request.method == 'POST':
+        user = request.user
+        stripe.api_key = 'sk_test_kPXdUZ1fURSK3ziMEkw1O9rs'
+        customer = stripe.Customer.create(
+            description=request.user.username,
+            card=request.POST.get('stripeToken')
+        )
+        user.stripe_id = customer.id
+        user.save()
+
+        stripe.Charge.create(
+            amount=500,
+            currency="usd",
+            customer=user.stripe_id,
+            description="nice"
+        )
+
+
+
+
+
+
+    return render(request, 'test.html', {'obj': request.user.stripe_id})

@@ -24,4 +24,7 @@ urlpatterns = patterns('',
                        url(r'^support/$', 'beewaga_app.views.supports'),
                        url(r'^about_team/$', 'beewaga_app.views.about_team', name='about_team'),
                        url(r'^about_beewaga/$', 'beewaga_app.views.about_beewaga', name='about_beewaga'),
+                       url(r'^TEST/$', 'beewaga_app.views.test', name='test'),
+                       url(r'^pay/$', 'beewaga_app.views.pay', name='test'),
                        )
+
